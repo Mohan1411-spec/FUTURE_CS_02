@@ -1,0 +1,35 @@
+# 🛡️ Incident Response Report
+
+**Incident ID**: IR-2025-08-22-001  
+**Date/Time Detected**: August 22, 2025, 11:45 IST  
+**Reported By**: SIEM Alert - Azure Sentinel  
+**Severity Level**: High  
+**Incident Type**: Brute Force Attack  
+
+## 🔍 Summary
+Multiple failed login attempts detected from IP 203.0.113.45 targeting the admin portal. Attempts occurred over a 10-minute window, triggering threshold alerts.
+
+## 🧪 Investigation
+- Source IP: 203.0.113.45 (Flagged in threat intel)
+- Target: Admin login endpoint
+- Attempts: 150+ failed logins
+- No successful access recorded
+
+## 🧯 Response Actions
+- Blocked IP at firewall
+- Reset admin credentials
+- Enabled MFA for all privileged accounts
+- Reviewed logs for lateral movement (none found)
+
+## 📊 Impact Assessment
+- No data exfiltration
+- No system compromise
+- Temporary login disruption for admin users
+
+## ✅ Recommendations
+- Implement rate limiting on login endpoints
+- Enhance SIEM alert thresholds
+- Conduct user awareness training
+
+**Prepared By**: Mohan  
+**Date**: August 22, 2025
